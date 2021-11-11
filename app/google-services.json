@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1038773782712",
+    "project_id": "goesjogja-a6763",
+    "storage_bucket": "goesjogja-a6763.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1038773782712:android:cc2770be1301bc97fe4c4d",
+        "android_client_info": {
+          "package_name": "com.satya.goesjogja"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1038773782712-bt5tpa73hlq6pgfahpfchcgup80j872l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBm6ztxouk0nFWssR-i7UTUY4K1VsmG864"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1038773782712-bt5tpa73hlq6pgfahpfchcgup80j872l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
