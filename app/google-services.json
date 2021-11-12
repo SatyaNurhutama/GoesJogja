@@ -9,10 +9,18 @@
       "client_info": {
         "mobilesdk_app_id": "1:1038773782712:android:cc2770be1301bc97fe4c4d",
         "android_client_info": {
-          "package_name": "com.satya.goesjogja"
+          "package_name": "com.ppl3.goesjogja"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "1038773782712-0j2lajb63ges9ncot99n2k3hprunjt6s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ppl3.goesjogja",
+            "certificate_hash": "4854afb1724167814dd6b8ab610f9dba58c82300"
+          }
+        },
         {
           "client_id": "1038773782712-bt5tpa73hlq6pgfahpfchcgup80j872l.apps.googleusercontent.com",
           "client_type": 3

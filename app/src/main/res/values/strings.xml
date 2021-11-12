@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">GoesJogja</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="nama_belakang">Nama Belakang</string>
+    <string name="daftar">Daftar</string>
+
+    <!--ganti ke indo -->
+    <string name="err_msg_enter_first_name">Please enter first name.</string>
+    <string name="err_msg_enter_last_name">Please enter last name.</string>
+    <string name="err_msg_enter_email">Please enter email.</string>
+    <string name="err_msg_enter_password">Please enter password.</string>
+    <string name="err_msg_enter_confirm_password">Please enter confirm password.</string>
+    <string name="err_msg_password_and_confirm_password_mismatch">Password and confirm password does not match.</string>
+    <string name="err_msg_agree_terms_and_condition">Please agree terms and condition.</string>
+    <string name="data_valid">Your details are valid.</string>
+
+    <string name="daftar_sukses">Berhasil Daftar</string>
+    <!---->
+
+
+
 </resources>
