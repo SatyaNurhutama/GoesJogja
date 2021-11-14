@@ -4,8 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".user.activity.RegisterActivity"
-    android:id="@+id/content">
+    tools:context=".user.activity.UserProfileActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_user_image"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_user_placeholder" />
+    </FrameLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_namaDepan"
@@ -13,6 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/nama_depan"
+        app:layout_constraintTop_toBottomOf="@id/fl_user_image"
         tools:ignore="MissingConstraints">
 
         <EditText
@@ -58,45 +74,62 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_password"
+        android:id="@+id/til_phone"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/password"
+        android:hint="@string/nomor_telepon"
         app:layout_constraintTop_toBottomOf="@id/til_email"
         tools:ignore="MissingConstraints">
 
         <EditText
-            android:id="@+id/et_password"
+            android:id="@+id/et_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text" />
+            android:inputType="phone" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_confirmPassword"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <RadioGroup
+        android:id="@+id/rg_gender"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Konfirmasi Password"
-        app:layout_constraintTop_toBottomOf="@id/til_password"
-        tools:ignore="MissingConstraints">
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_phone"
+        android:layout_height="30dp">
 
-        <EditText
-            android:id="@+id/et_confirmPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text" />
+        <RadioButton
+            android:id="@+id/rb_male"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="@string/laki_laki"
+            android:textStyle="bold" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+        <RadioButton
+            android:id="@+id/rb_female"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Perempuan"
+            android:textStyle="bold" />
+    </RadioGroup>
 
     <Button
-        android:id="@+id/btn_daftar"
+        android:id="@+id/btn_save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/daftar"
-        app:layout_constraintTop_toBottomOf="@id/til_confirmPassword"
+        app:layout_constraintTop_toBottomOf="@id/rg_gender"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

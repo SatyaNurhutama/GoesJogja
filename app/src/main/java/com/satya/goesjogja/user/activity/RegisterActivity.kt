@@ -1,13 +1,9 @@
-package com.satya.goesjogja.activity
+package com.satya.goesjogja.user.activity
 
-import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.service.controls.ControlsProviderService.TAG
 import android.text.TextUtils
 import android.util.Log
-import android.view.View
 import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
@@ -15,14 +11,12 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
-import com.google.firebase.ktx.Firebase
 import com.satya.goesjogja.R
 import com.satya.goesjogja.databinding.ActivityRegisterBinding
-import com.satya.goesjogja.model.User
-import com.satya.goesjogja.utils.Status
+import com.satya.goesjogja.user.model.User
+import kotlinx.android.synthetic.main.activity_register.*
 
 class RegisterActivity : BaseActivity() {
 
@@ -52,6 +46,7 @@ class RegisterActivity : BaseActivity() {
         registerBinding.btnDaftar.setOnClickListener {
             registerUser()
         }
+
     }
 
     private fun validateRegisterDetails(): Boolean {
@@ -87,55 +82,43 @@ class RegisterActivity : BaseActivity() {
         }
     }
 
-    private fun showLoading(status: Boolean) {
-        if (status) {
-            registerBinding.progressBar.visibility = View.VISIBLE
-        } else {
-            registerBinding.progressBar.visibility = View.GONE
-        }
-    }
-
     private fun registerUser() {
         if (validateRegisterDetails()) {
-
-            showLoading(true)
+            showProgressDialog(resources.getString(R.string.loading))
 
             val email: String = registerBinding.etEmail.text.toString().trim { it <= ' ' }
             val password: String = registerBinding.etPassword.text.toString().trim { it <= ' ' }
 
             FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
                     .addOnCompleteListener(OnCompleteListener<AuthResult> { task ->
+
+                        hideProgressDialog()
+
                         if (task.isSuccessful) {
 
                             val firebaseUser: FirebaseUser = task.result!!.user!!
 
-                            /*val user = User(
+                            val user = User(
                                     firebaseUser.uid,
                                     registerBinding.etNamaDepan.text.toString().trim { it <= ' ' },
                                     registerBinding.etNamaBelakang.text.toString().trim { it <= ' ' },
                                     registerBinding.etEmail.text.toString().trim { it <= ' ' }
                             )
 
-                             */
-
-                            showErrorSnackBar("${firebaseUser.uid}", false)
-
-                            /*mFireStore.collection(USER)
+                            mFireStore.collection(USER)
                                     .document(user.id)
                                     .set(user, SetOptions.merge())
                                     .addOnSuccessListener {
-                                        showLoading(false)
-
-                                        //FirebaseAuth.getInstance().signOut()
+                                        hideProgressDialog()
+                                        Toast.makeText(this@RegisterActivity, resources.getString(R.string.daftar_sukses), Toast.LENGTH_SHORT).show()
+                                        FirebaseAuth.getInstance().signOut()
                                         finish()
                                     }
                                     .addOnFailureListener { e ->
-                                        showLoading(false)
+                                        hideProgressDialog()
                                         Log.e(javaClass.simpleName, "Error while registering the user")
                                     }
-                                    */
                         } else {
-                            showLoading(false)
                             showErrorSnackBar(task.exception!!.message.toString(), true)
                         }
                     })

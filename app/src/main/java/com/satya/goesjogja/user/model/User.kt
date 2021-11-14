@@ -1,4 +1,4 @@
-package com.satya.goesjogja.model
+package com.satya.goesjogja.user.model
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

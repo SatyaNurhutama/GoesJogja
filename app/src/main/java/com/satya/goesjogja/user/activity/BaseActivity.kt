@@ -1,16 +1,19 @@
-package com.satya.goesjogja.activity
+package com.satya.goesjogja.user.activity
 
 import android.app.Dialog
+import android.os.Handler
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.google.android.material.snackbar.Snackbar
 import com.satya.goesjogja.R
+import kotlinx.android.synthetic.main.dialog_progress.*
 
 open class BaseActivity : AppCompatActivity() {
 
     private lateinit var mProgressDialog: Dialog
 
-    //private var doubleBackPressedOnce = false
+    private var doubleBackPressedOnce = false
 
     fun showErrorSnackBar(message: String, errorMessage: Boolean) {
 
@@ -36,7 +39,22 @@ open class BaseActivity : AppCompatActivity() {
         snackBar.show()
     }
 
-    /*fun doubleBackToExit(){
+    fun showProgressDialog(text: String) {
+        mProgressDialog = Dialog(this)
+        mProgressDialog.setContentView(R.layout.dialog_progress)
+
+        mProgressDialog.tv_loading.text = text
+        mProgressDialog.setCancelable(false)
+        mProgressDialog.setCanceledOnTouchOutside(false)
+
+        mProgressDialog.show()
+    }
+
+    fun hideProgressDialog() {
+        mProgressDialog.dismiss()
+    }
+
+    fun doubleBackToExit(){
 
         if(doubleBackPressedOnce){
             super.onBackPressed()
@@ -45,8 +63,8 @@ open class BaseActivity : AppCompatActivity() {
 
         this.doubleBackPressedOnce = true
 
-        Toast.makeText(this, resources.getString(R.string.click_back_again), Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, resources.getString(R.string.klik_2Kali), Toast.LENGTH_SHORT).show()
 
         Handler().postDelayed( {doubleBackPressedOnce = false}, 2000)
-    } */
+    }
 }
