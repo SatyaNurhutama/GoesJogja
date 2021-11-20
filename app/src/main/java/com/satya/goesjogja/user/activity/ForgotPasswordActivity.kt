@@ -3,6 +3,7 @@ package com.satya.goesjogja.user.activity
 import android.os.Bundle
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.satya.goesjogja.BaseActivity
 import com.satya.goesjogja.R
 import com.satya.goesjogja.databinding.ActivityForgotPasswordBinding
 

@@ -13,6 +13,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
+import com.satya.goesjogja.BaseActivity
 import com.satya.goesjogja.R
 import com.satya.goesjogja.databinding.ActivityRegisterBinding
 import com.satya.goesjogja.user.model.User

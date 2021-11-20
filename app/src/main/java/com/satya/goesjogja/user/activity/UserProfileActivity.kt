@@ -21,7 +21,7 @@ import com.bumptech.glide.Glide
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
-import com.satya.goesjogja.MainActivity
+import com.satya.goesjogja.BaseActivity
 import com.satya.goesjogja.R
 import com.satya.goesjogja.user.activity.LoginActivity.Companion.EXTRA_USER_DETAILS
 import com.satya.goesjogja.user.activity.RegisterActivity.Companion.USER
@@ -73,12 +73,36 @@ class UserProfileActivity : BaseActivity(), View.OnClickListener {
             mUserDetails = intent.getParcelableExtra(EXTRA_USER_DETAILS)!!
         }
 
-        userProfileBinding.etNamaDepan.isEnabled = false
-        userProfileBinding.etNamaBelakang.isEnabled = false
-        userProfileBinding.etNamaDepan.setText(mUserDetails.firstName)
-        userProfileBinding.etNamaBelakang.setText(mUserDetails.lastName)
-        userProfileBinding.etEmail.isEnabled = false
-        userProfileBinding.etEmail.setText(mUserDetails.email)
+        if(mUserDetails.profileCompleted == 0){
+            userProfileBinding.etNamaDepan.isEnabled = false
+            userProfileBinding.etNamaBelakang.isEnabled = false
+            userProfileBinding.etNamaDepan.setText(mUserDetails.firstName)
+            userProfileBinding.etNamaBelakang.setText(mUserDetails.lastName)
+            userProfileBinding.etEmail.isEnabled = false
+            userProfileBinding.etEmail.setText(mUserDetails.email)
+        } else {
+
+            userProfileBinding.etNamaDepan.setText(mUserDetails.firstName)
+            userProfileBinding.etNamaBelakang.setText(mUserDetails.lastName)
+            userProfileBinding.etEmail.setText(mUserDetails.email)
+
+            Glide.with(this)
+                    .load(mUserDetails.image)
+                    .centerCrop()
+                    .placeholder(R.drawable.ic_user_placeholder)
+                    .into(userProfileBinding.imgProfile)
+
+            if(mUserDetails.mobile != 0L){
+                userProfileBinding.etPhone.setText(mUserDetails.mobile.toString())
+            }
+
+            if(mUserDetails.gender == MALE){
+                userProfileBinding.rbMale.isChecked = true
+            } else {
+                userProfileBinding.rbFemale.isChecked = true
+            }
+
+        }
 
         userProfileBinding.btnSave.setOnClickListener(this)
         userProfileBinding.imgProfile.setOnClickListener(this)
@@ -171,7 +195,7 @@ class UserProfileActivity : BaseActivity(), View.OnClickListener {
 
     private fun validateUserProfileDetails(): Boolean {
         return when {
-            TextUtils.isEmpty(userProfileBinding.btnSave.toString().trim { it <= ' ' }) -> {
+            TextUtils.isEmpty(userProfileBinding.etPhone.toString().trim { it <= ' ' }) -> {
                 showErrorSnackBar(resources.getString(R.string.err_pesan_nomor_telepon), false)
                 false
             }
@@ -188,7 +212,7 @@ class UserProfileActivity : BaseActivity(), View.OnClickListener {
                 .addOnSuccessListener {
                     hideProgressDialog()
                     Toast.makeText(this, resources.getString(R.string.profile_sukses), Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this@UserProfileActivity, MainActivity::class.java))
+                    startActivity(Intent(this@UserProfileActivity, HomeActivity::class.java))
                     finish()
                 }
 
@@ -228,7 +252,6 @@ class UserProfileActivity : BaseActivity(), View.OnClickListener {
     private fun getFileExtension(uri: Uri?): String? {
         return MimeTypeMap.getSingleton()
                 .getExtensionFromMimeType(contentResolver.getType(uri!!))
-
     }
 
     private fun updateUserProfileDetails(){

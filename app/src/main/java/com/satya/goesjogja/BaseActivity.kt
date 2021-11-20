@@ -1,4 +1,4 @@
-package com.satya.goesjogja.user.activity
+package com.satya.goesjogja
 
 import android.app.Dialog
 import android.os.Handler
@@ -12,8 +12,7 @@ import kotlinx.android.synthetic.main.dialog_progress.*
 open class BaseActivity : AppCompatActivity() {
 
     private lateinit var mProgressDialog: Dialog
-
-    private var doubleBackPressedOnce = false
+    private var doubleBack : Boolean = false
 
     fun showErrorSnackBar(message: String, errorMessage: Boolean) {
 
@@ -56,15 +55,15 @@ open class BaseActivity : AppCompatActivity() {
 
     fun doubleBackToExit(){
 
-        if(doubleBackPressedOnce){
+        if(doubleBack){
             super.onBackPressed()
             return
         }
 
-        this.doubleBackPressedOnce = true
+        this.doubleBack = true
 
         Toast.makeText(this, resources.getString(R.string.klik_2Kali), Toast.LENGTH_SHORT).show()
 
-        Handler().postDelayed( {doubleBackPressedOnce = false}, 2000)
+        Handler().postDelayed( {doubleBack = false}, 2000)
     }
 }

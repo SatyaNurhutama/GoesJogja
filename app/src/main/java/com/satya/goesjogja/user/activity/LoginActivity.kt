@@ -12,7 +12,7 @@ import android.view.WindowInsets
 import android.view.WindowManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.satya.goesjogja.MainActivity
+import com.satya.goesjogja.BaseActivity
 import com.satya.goesjogja.R
 import com.satya.goesjogja.databinding.ActivityLoginBinding
 import com.satya.goesjogja.user.model.User
@@ -133,7 +133,7 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
             intent.putExtra(EXTRA_USER_DETAILS, user)
             startActivity(intent)
         } else {
-            startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+            startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
         }
         finish()
     }

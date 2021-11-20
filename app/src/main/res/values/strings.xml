@@ -30,6 +30,22 @@
     <string name="gagal_pilih_gambar">Gagal memilih gambar</string>
     <string name="err_pesan_nomor_telepon">Masukkan nomor telepon</string>
     <string name="profile_sukses">Profile tersimpan</string>
+    <string name="title_activity_home">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_order">Order</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_wisata">Wisata</string>
+    <string name="title_event">Event</string>
+    <string name="title_kuliner">Kuliner</string>
+    <string name="title_hotel">Hotel</string>
 
+    <string name="name">Satya Nurhutama</string>
+    <string name="email_user">satyanurhutama@gmail.com</string>
+    <string name="log_out">Log Out</string>
+    <string name="edit">Edit Profile</string>
+    <string name="user">user</string>
+    <string name="admin">Admin</string>
 
 </resources>
