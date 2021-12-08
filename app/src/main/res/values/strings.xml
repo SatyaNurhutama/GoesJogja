@@ -47,5 +47,19 @@
     <string name="edit">Edit Profile</string>
     <string name="user">user</string>
     <string name="admin">Admin</string>
+    <string name="title_activity_home_admin">MainActivity</string>
+    <string name="title_pesanan">Pesanan</string>
+    <string name="nama_wisata">Nama Wisata</string>
+    <string name="deskripsi_wisata">Deskripsi Wisata</string>
+    <string name="harga_tiket">Harga Tiket</string>
+    <string name="lokasi">Lokasi</string>
+    <string name="tambah">Tambah</string>
+    <string name="yes">Ya</string>
+    <string name="tidak">Tidak</string>
+    <string name="Hapus">hapus</string>
+    <string name="edit_wisata">Edit</string>
+    <string name="beli_tiket">Beli Tiket</string>
+    <string name="cart">Cart</string>
+    <string name="checkout">Checkout</string>
 
 </resources>

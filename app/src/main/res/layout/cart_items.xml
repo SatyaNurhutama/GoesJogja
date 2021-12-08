@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- jangan lupa ganti teks nya -->
+
+    <FrameLayout
+        android:id="@+id/fl_wisata_image"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_wisata"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_user_placeholder" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_namaWisata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_wisata"
+        app:layout_constraintStart_toEndOf="@id/fl_wisata_image"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_harga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/harga_tiket"
+        app:layout_constraintStart_toEndOf="@id/fl_wisata_image"
+        app:layout_constraintTop_toBottomOf="@id/tv_namaWisata"/>
+
+    <TextView
+        android:id="@+id/tv_hapus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Hapus"
+        app:layout_constraintStart_toEndOf="@id/fl_wisata_image"
+        app:layout_constraintTop_toBottomOf="@id/tv_harga"/>
+
+    <LinearLayout
+        android:id="@+id/ll_update_cart_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_hapus"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/ib_remove_cart_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_baseline_remove_24" />
+
+        <TextView
+            android:id="@+id/tv_cart_quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorSecondaryText"
+            android:textStyle="bold"
+            tools:text="1" />
+
+        <ImageButton
+            android:id="@+id/ib_add_cart_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_baseline_add_24" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

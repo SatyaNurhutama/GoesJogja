@@ -14,6 +14,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.satya.goesjogja.BaseActivity
 import com.satya.goesjogja.R
+import com.satya.goesjogja.admin.activity.DashboardActivity
+import com.satya.goesjogja.admin.activity.LoginAdminActivity
 import com.satya.goesjogja.databinding.ActivityLoginBinding
 import com.satya.goesjogja.user.model.User
 
@@ -128,14 +130,15 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
     private fun checkProfile(user: User) {
         hideProgressDialog()
 
-        if (user.profileCompleted == 0) {
-            val intent = Intent(this@LoginActivity, UserProfileActivity::class.java)
-            intent.putExtra(EXTRA_USER_DETAILS, user)
+        if (user.type == "user") {
+            val intent = Intent(this, HomeActivity::class.java)
+            intent.putExtra(LoginActivity.EXTRA_USER_DETAILS, user)
             startActivity(intent)
+            finish()
         } else {
-            startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
+            showErrorSnackBar(resources.getString(R.string.loading), true)
         }
-        finish()
+
     }
 
     override fun onClick(v: View?) {

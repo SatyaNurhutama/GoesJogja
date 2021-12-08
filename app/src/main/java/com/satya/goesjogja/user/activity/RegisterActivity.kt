@@ -103,7 +103,8 @@ class RegisterActivity : BaseActivity() {
                                     firebaseUser.uid,
                                     registerBinding.etNamaDepan.text.toString().trim { it <= ' ' },
                                     registerBinding.etNamaBelakang.text.toString().trim { it <= ' ' },
-                                    registerBinding.etEmail.text.toString().trim { it <= ' ' }
+                                    registerBinding.etEmail.text.toString().trim { it <= ' ' },
+                                    "user"
                             )
 
                             mFireStore.collection(USER)

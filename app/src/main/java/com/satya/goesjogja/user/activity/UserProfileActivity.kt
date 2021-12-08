@@ -44,7 +44,6 @@ class UserProfileActivity : BaseActivity(), View.OnClickListener {
         const val COMPLETE_USER_PROFILE: String = "profileCompleted"
         const val FIRST_NAME: String = "firstName"
         const val LAST_NAME: String = "lastName"
-        const val USER_ID: String = "user_id"
     }
 
     private lateinit var userProfileBinding: ActivityUserProfileBinding
@@ -249,7 +248,7 @@ class UserProfileActivity : BaseActivity(), View.OnClickListener {
                 }
     }
 
-    private fun getFileExtension(uri: Uri?): String? {
+    fun getFileExtension(uri: Uri?): String? {
         return MimeTypeMap.getSingleton()
                 .getExtensionFromMimeType(contentResolver.getType(uri!!))
     }

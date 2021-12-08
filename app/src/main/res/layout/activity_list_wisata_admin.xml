@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".user.fragment.OrderFragment">
+    tools:context=".admin.activity.ListWisataAdminActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_order_item"
+        android:id="@+id/rv_wisata_item"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,4 +22,5 @@
         android:layout_height="wrap_content"
         android:text="@string/log_out"
         tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

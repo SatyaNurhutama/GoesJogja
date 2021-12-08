@@ -11,7 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".admin.activity.LoginAdminActivity"></activity>
+        <activity android:name=".user.activity.CartActivity"></activity>
+        <activity android:name=".admin.activity.DetailWisataActivity" />
+        <activity android:name=".user.activity.WisataActivity" />
+        <activity android:name=".admin.activity.ListWisataAdminActivity" />
+        <activity android:name=".admin.activity.DetailAdminActivity" />
+        <activity android:name=".admin.activity.TambahWisataActivity" />
+        <activity android:name=".admin.activity.DashboardActivity" />
+        <activity android:name=".admin.activity.RegisterAdminActivity" />
+        <activity android:name=".admin.activity.LoginAdminActivity" />
         <activity
             android:name=".user.activity.HomeActivity"
             android:label="@string/title_activity_home" />
@@ -22,14 +30,14 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".user.activity.LoginActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

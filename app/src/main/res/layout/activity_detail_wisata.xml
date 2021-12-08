@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.activity.DetailWisataActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_wisata_image"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_wisata"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_user_placeholder" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_namaWisata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_wisata"
+        app:layout_constraintTop_toBottomOf="@id/fl_wisata_image"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_deskripsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/deskripsi_wisata"
+        app:layout_constraintTop_toBottomOf="@id/tv_namaWisata"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_lokasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lokasi"
+        app:layout_constraintTop_toBottomOf="@id/tv_deskripsi"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_harga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/harga_tiket"
+        app:layout_constraintTop_toBottomOf="@id/tv_lokasi"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btn_beli"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/beli_tiket"
+        app:layout_constraintTop_toBottomOf="@id/tv_harga"
+        android:visibility="visible"
+        tools:ignore="MissingConstraints" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
