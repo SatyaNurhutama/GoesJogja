@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".user.activity.CartActivity"></activity>
+        <activity android:name=".admin.activity.DetailOrderAdminActivity"></activity>
+        <activity android:name=".admin.activity.OrderAdminActivity" />
+        <activity android:name=".user.activity.OrderDetailActivity" />
+        <activity android:name=".user.activity.CheckoutActivity" />
+        <activity android:name=".user.activity.CartActivity" />
         <activity android:name=".admin.activity.DetailWisataActivity" />
         <activity android:name=".user.activity.WisataActivity" />
         <activity android:name=".admin.activity.ListWisataAdminActivity" />

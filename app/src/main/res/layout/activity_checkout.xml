@@ -4,41 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".user.activity.CartActivity">
-
-    <!-- jangan lupa ganti teks nya -->
+    tools:context=".user.activity.CheckoutActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-    android:id="@+id/rv_cart_item"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"
-    android:visibility="gone"/>
-
-    <TextView
-        android:id="@+id/tv_kosong"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/log_out"
-        tools:ignore="MissingConstraints" />
+        android:id="@+id/rv_cart_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
     <TextView
         android:id="@+id/tv_total"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/edit"
-        app:layout_constraintBottom_toTopOf="@id/btn_chekout"/>
+        app:layout_constraintBottom_toTopOf="@id/btn_order"/>
 
     <Button
-        android:id="@+id/btn_chekout"
+        android:id="@+id/btn_order"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/checkout"
+        android:text="@string/title_order"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -105,6 +105,7 @@ class DetailWisataActivity : BaseActivity(), View.OnClickListener {
     private fun addToCArt(){
         val addToCart = Cart(
                 LoginActivity().getCurrentUserID(),
+                mWisataOwnerId,
                 mWisataId,
                 mWisataDetails.nama,
                 mWisataDetails.harga,
