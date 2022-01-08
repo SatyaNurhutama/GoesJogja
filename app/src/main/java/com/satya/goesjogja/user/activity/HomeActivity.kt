@@ -22,6 +22,8 @@ class HomeActivity : BaseActivity() {
         val view = homeBinding.root
         setContentView(view)
 
+        supportActionBar!!.hide()
+
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
         val navController = findNavController(R.id.nav_host_fragment)

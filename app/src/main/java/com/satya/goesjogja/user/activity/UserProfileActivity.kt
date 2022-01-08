@@ -58,6 +58,8 @@ class UserProfileActivity : BaseActivity(), View.OnClickListener {
         val view = userProfileBinding.root
         setContentView(view)
 
+        supportActionBar!!.hide()
+
         @Suppress("DEPRECATION")
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             window.insetsController?.hide(WindowInsets.Type.statusBars())

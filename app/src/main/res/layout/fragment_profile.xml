@@ -6,52 +6,158 @@
     android:layout_height="match_parent"
     tools:context=".user.fragment.ProfileFragment">
 
-    <FrameLayout
-        android:id="@+id/fl_user_image"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/bg_appbar"
+        android:gravity="center"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/img_profile"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            android:src="@drawable/ic_user_placeholder" />
-    </FrameLayout>
+            android:fontFamily="@font/robotoslab_bold"
+            android:gravity="center"
+            android:text="Profile"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/tv_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/name"
-        app:layout_constraintTop_toBottomOf="@id/fl_user_image"
-        tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/tv_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/email_user"
-        app:layout_constraintTop_toBottomOf="@id/tv_name"
-        tools:ignore="MissingConstraints" />
+    </RelativeLayout>
 
-    <TextView
-        android:id="@+id/tv_edit"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/edit"
-        app:layout_constraintTop_toBottomOf="@id/tv_email"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        android:padding="20dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_img_profile"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            app:cardCornerRadius="50dp"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/img_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_avatar_1"
+                android:scaleType="fitXY"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cv_img_profile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Nama"
+            android:fontFamily="@font/robotoslab_bold"
+            android:textSize="17sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_tipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:layout_centerHorizontal="true"
+            android:text="Pengunjung"
+            android:fontFamily="@font/robotoslab_reg"
+            android:textSize="13sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_tipe"
+            android:layout_centerHorizontal="true"
+            android:text="email@mail.com"
+            android:fontFamily="@font/robotoslab_reg"
+            android:textSize="13sp"
+            android:textColor="@color/colorSecondaryText"/>
+
+        <Button
+            android:id="@+id/tv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_below="@id/tv_email"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_button"
+            android:fontFamily="@font/robotoslab_bold"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:text="Edit Profil"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
 
     <Button
         android:id="@+id/btn_log_out"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_button"
+        android:fontFamily="@font/robotoslab_bold"
         android:text="@string/log_out"
-        app:layout_constraintTop_toBottomOf="@id/tv_edit"
-        tools:ignore="MissingConstraints" />
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    <!--    <TextView-->
+<!--        android:id="@+id/tv_name"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/name"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/fl_user_image"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_email"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/email_user"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tv_name"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_edit"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/edit"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tv_email"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_log_out"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/log_out"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tv_edit"-->
+<!--        tools:ignore="MissingConstraints" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

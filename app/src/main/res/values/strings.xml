@@ -1,20 +1,38 @@
 <resources>
     <string name="app_name">GoesJogja</string>
     <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="login">Login</string>
+    <string name="password">********</string>
+    <string name="login">Log In</string>
+    <string name="login1">\u0020\u0020Log In</string>
+    <string name="signup">Sign Up</string>
+    <string name="signup1">\u0020\u0020Sign Up</string>
     <string name="nama_belakang">Nama Belakang</string>
     <string name="daftar">Daftar</string>
+    <string name="lupasandi">\u0020\u0020Lupa Sandi</string>
+    <string name="tv_lupasandi">Masukkan email Anda untuk menerima kode verifikasi</string>
+
+    <!---->
+    <string name="t_mail">Masukan Email / No. Telp</string>
+    <string name="in_mail">Email atau No. Telp</string>
+    <string name="t_sandi">Kata Sandi</string>
+    <string name="t_konfirmasi_sandi">Konfirmasi Kata Sandi</string>
+    <string name="in_sandi">**********</string>
+    <string name="no_account">Belum punya akun?</string>
+    <string name="yes_account">Sudah punya akun?</string>
+    <string name="telp">No. Telp</string>
+    <string name="nomor">1234567890</string>
+    <string name="buatAkun">Buat Akun</string>
+    <string name="register_success">Registrasi Sukses</string>
 
     <!--ganti ke indo -->
-    <string name="err_msg_enter_first_name">Please enter first name.</string>
-    <string name="err_msg_enter_last_name">Please enter last name.</string>
-    <string name="err_msg_enter_email">Please enter email.</string>
-    <string name="err_msg_enter_password">Please enter password.</string>
-    <string name="err_msg_enter_confirm_password">Please enter confirm password.</string>
-    <string name="err_msg_password_and_confirm_password_mismatch">Password and confirm password does not match.</string>
-    <string name="err_msg_agree_terms_and_condition">Please agree terms and condition.</string>
-    <string name="data_valid">Your details are valid.</string>
+    <string name="err_msg_enter_first_name">Mohon masukan nama depan.</string>
+    <string name="err_msg_enter_last_name">Mohon masukan nama belakang.</string>
+    <string name="err_msg_enter_email">Mohon masukan email.</string>
+    <string name="err_msg_enter_password">Mohon masukan kata sandi.</string>
+    <string name="err_msg_enter_confirm_password">Mohon masukan konfirmasi kata sandi.</string>
+    <string name="err_msg_password_and_confirm_password_mismatch">Kata Sandi tidak cocok.</string>
+    <string name="err_msg_agree_terms_and_condition">Mohon setujui syarat dan ketentuan.</string>
+    <string name="data_valid">Detail Anda valid.</string>
 
     <string name="daftar_sukses">Berhasil Daftar</string>
     <!---->
@@ -23,6 +41,9 @@
     <string name="nama_depan">Nama Depan</string>
     <string name="nomor_telepon">Nomor Telepon</string>
     <string name="laki_laki">Laki Laki</string>
+    <string name="perempuan">Perempuan</string>
+    <string name="pria">Pria</string>
+    <string name="wanita">Wanita</string>
 
     <string name="reset_password">Reset Password</string>
     <string name="lupa_password">Lupa Password?</string>
@@ -36,7 +57,7 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_order">Order</string>
     <string name="title_profile">Profile</string>
-    <string name="title_wisata">Wisata</string>
+    <string name="title_wisata">Wisata Yogyakarta</string>
     <string name="title_event">Event</string>
     <string name="title_kuliner">Kuliner</string>
     <string name="title_hotel">Hotel</string>
@@ -61,5 +82,7 @@
     <string name="beli_tiket">Beli Tiket</string>
     <string name="cart">Cart</string>
     <string name="checkout">Checkout</string>
+
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sem nunc vitae egestas ipsum posuere. Diam orci, aliquam, tempus, nec a nec accumsan ac. Vitae in sed aliquam nulla risus, praesent. Integer consectetur diam sit vel, felis.</string>
 
 </resources>

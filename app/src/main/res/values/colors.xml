@@ -9,15 +9,17 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorSnackBarSuccess">#8BC34A</color>
     <color name="colorSnackBarError">#F72400</color>
-    <color name="oren">#E15529</color>
+    <color name="colorCard">#F2F2F2</color>
+    <color name="colorBottomNavIcon">#F0AA94</color>
 
-    <color name="colorPrimary">#ED2173</color>
+    <color name="colorPrimary">#E15529</color>
     <color name="colorPrimaryDark">#222934</color>
-    <color name="colorAccent">#ED2173</color>
+    <color name="colorAccent">#E15529</color>
 
     <color name="colorThemePink">#ED2173</color>
     <color name="colorThemeOrange">#F4442d</color>
 
     <color name="colorPrimaryText">#222934</color>
     <color name="colorSecondaryText">#878080</color>
+
 </resources>
