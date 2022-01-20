@@ -18,6 +18,8 @@ class ListEventActivity : AppCompatActivity() {
         binding = ActivityListEventBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar!!.hide()
+
         binding.rvEvent.layoutManager = LinearLayoutManager(this)
         binding.rvEvent.setHasFixedSize(true)
 

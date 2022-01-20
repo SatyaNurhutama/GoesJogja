@@ -25,6 +25,8 @@ class OrderDetailActivity : AppCompatActivity() {
         val view = orderDetailBinding.root
         setContentView(view)
 
+        supportActionBar!!.hide()
+
         var myOrderDetail: Order = Order()
         if(intent.hasExtra(EXTRA_MY_ORDER_DETAILS)){
             myOrderDetail = intent.getParcelableExtra<Order>(EXTRA_MY_ORDER_DETAILS)!!

@@ -17,6 +17,8 @@ class ListKulinerActivity : AppCompatActivity() {
         binding = ActivityListKulinerBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar!!.hide()
+
         binding.rvKuliner.layoutManager = LinearLayoutManager(this)
         binding.rvKuliner.setHasFixedSize(true)
 

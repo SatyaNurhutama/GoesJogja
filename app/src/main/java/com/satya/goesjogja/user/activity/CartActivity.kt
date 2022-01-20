@@ -32,6 +32,8 @@ class CartActivity : BaseActivity() {
         val view = cartBinding.root
         setContentView(view)
 
+        supportActionBar!!.hide()
+
         cartBinding.btnChekout.setOnClickListener {
             val intent = Intent(this@CartActivity, CheckoutActivity::class.java)
             startActivity(intent)

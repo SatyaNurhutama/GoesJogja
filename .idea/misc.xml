@@ -13,29 +13,43 @@
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/drawable/et_background.xml" value="0.3828125" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/drawable/et_bg.xml" value="0.3828125" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/drawable/ic_back.xml" value="0.3828125" />
+        <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.3723076923076923" />
+        <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.3723076923076923" />
+        <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.3723076923076923" />
+        <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.25" />
+        <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/drawable/ic_baseline_local_phone_24.xml" value="0.34629629629629627" />
+        <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/drawable/ic_baseline_remove_24.xml" value="0.3723076923076923" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.221875" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/drawable/round_outline.xml" value="0.378125" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/drawable/text_radio.xml" value="0.378125" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/font/font_robotoslab.xml" value="0.39076923076923076" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_cart.xml" value="0.20572916666666666" />
+        <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_checkout.xml" value="0.33" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_dashboard.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_detail_admin.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_detail_event.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_detail_kuliner.xml" value="0.3619791666666667" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_detail_order_admin.xml" value="0.3619791666666667" />
-        <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_detail_wisata.xml" value="0.33" />
+        <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_detail_wisata.xml" value="0.29923076923076924" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_forgot_password.xml" value="0.33" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_home.xml" value="0.2015625" />
+        <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_list_event.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_list_kuliner.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_list_wisata_admin.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_login_admin.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_onboarding.xml" value="0.33" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_order_admin.xml" value="0.20572916666666666" />
-        <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_order_detail.xml" value="0.20572916666666666" />
+        <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_order_detail.xml" value="0.33" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_register.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_register_admin.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_register_success.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_tambah_wisata.xml" value="0.20260416666666667" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_user_profile.xml" value="0.33" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/activity_wisata.xml" value="0.20260416666666667" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/appbar_s.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/cart_items.xml" value="0.20572916666666666" />
+        <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/cart_items.xml" value="0.33" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/dialog_progress.xml" value="0.2015625" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/fragment_base.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/fragment_home.xml" value="0.17831813576494426" />
@@ -44,7 +58,7 @@
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/item_event.xml" value="0.3619791666666667" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/item_list.xml" value="0.3619791666666667" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/item_wisata.xml" value="0.33" />
-        <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/order_items.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/layout/order_items.xml" value="0.33" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/menu/add_wisata_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2015625" />
         <entry key="..\:/Users/Iqbalyh/StudioProjects/GoesJogja/app/src/main/res/menu/cart.xml" value="0.20572916666666666" />

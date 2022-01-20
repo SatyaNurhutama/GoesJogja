@@ -24,6 +24,8 @@ class DetailEventActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        supportActionBar!!.hide()
+
         binding.tvTitle.text = intent.getStringExtra(EXTRA_NAME)
         binding.tvTanggal.text = intent.getStringExtra(EXTRA_TANGGAL)
         binding.tvLokasi.text = intent.getStringExtra(EXTRA_LOKASI)

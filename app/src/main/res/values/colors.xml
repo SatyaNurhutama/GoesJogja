@@ -22,4 +22,6 @@
     <color name="colorPrimaryText">#222934</color>
     <color name="colorSecondaryText">#878080</color>
 
+    <color name="red">#FF1304</color>
+
 </resources>

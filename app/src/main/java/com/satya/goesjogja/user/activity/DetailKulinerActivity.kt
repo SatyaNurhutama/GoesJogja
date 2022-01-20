@@ -20,6 +20,8 @@ class DetailKulinerActivity : AppCompatActivity() {
         binding = ActivityDetailKulinerBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar!!.hide()
+
         binding.tvTitle.text = intent.getStringExtra(EXTRA_NAME)
         binding.tvDeskripsi.text = intent.getStringExtra(EXTRA_DESKRIPSI)
 
