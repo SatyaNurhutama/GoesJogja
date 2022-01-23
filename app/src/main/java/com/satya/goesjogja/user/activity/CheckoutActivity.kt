@@ -36,6 +36,8 @@ class CheckoutActivity : BaseActivity(), View.OnClickListener {
         val view = checkoutBinding.root
         setContentView(view)
 
+        supportActionBar!!.hide()
+
         getWisataList()
 
         checkoutBinding.btnOrder.setOnClickListener(this)

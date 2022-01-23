@@ -51,6 +51,8 @@ class TambahWisataActivity : BaseActivity(), View.OnClickListener {
         val view = tambahWisataBinding.root
         setContentView(view)
 
+        supportActionBar!!.hide()
+
         tambahWisataBinding.btnSave.setOnClickListener(this)
         tambahWisataBinding.imgWisata.setOnClickListener(this)
     }

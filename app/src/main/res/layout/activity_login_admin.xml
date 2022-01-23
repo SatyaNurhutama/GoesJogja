@@ -6,59 +6,196 @@
     android:layout_height="match_parent"
     tools:context=".admin.activity.LoginAdminActivity">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_email"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/back_login"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/email"
-        tools:ignore="MissingConstraints">
-
-        <EditText
-            android:id="@+id/et_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_password"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/password"
-        app:layout_constraintTop_toBottomOf="@id/til_email"
-        tools:ignore="MissingConstraints">
-
-        <EditText
-            android:id="@+id/et_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/login"
-        app:layout_constraintTop_toBottomOf="@id/til_password"
-        tools:ignore="MissingConstraints" />
+        android:drawableLeft="@drawable/ic_back"
+        android:fontFamily="@font/robotoslab_bold"
+        android:text="@string/login1"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toTopOf="@+id/guideline_top" />
 
     <TextView
-        android:id="@+id/tv_daftar"
-        android:layout_width="match_parent"
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/daftar"
-        app:layout_constraintTop_toBottomOf="@id/btn_login"/>
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/robotoslab_reg"
+        android:text="@string/t_mail"
+        android:textColor="@color/black"
+        android:textSize="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_login" />
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/et_bg"
+        app:layout_constraintEnd_toEndOf="@id/guideline_right"
+        android:hint="@string/in_mail"
+        android:padding="14dp"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/tvEmail" />
+
+    <TextView
+        android:id="@+id/tvPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="21dp"
+        android:fontFamily="@font/robotoslab_reg"
+        android:text="@string/t_sandi"
+        android:textColor="@color/black"
+        android:textSize="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_email" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:inputType="textPassword"
+        android:background="@drawable/et_bg"
+        app:layout_constraintEnd_toEndOf="@id/guideline_right"
+        android:hint="@string/in_sandi"
+        android:padding="14dp"
+        app:layout_constraintStart_toStartOf="@id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/tvPassword" />
 
     <TextView
         android:id="@+id/tv_forgot_password"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/robotoslab_reg"
         android:text="@string/lupa_password"
-        app:layout_constraintTop_toBottomOf="@id/tv_daftar"/>
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="11dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@id/et_password" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="217dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/bg_button"
+        android:fontFamily="@font/robotoslab_bold"
+        android:text="@string/login"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/tv_forgot_password" />
+
+    <TextView
+        android:id="@+id/tv_no_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="41dp"
+        android:fontFamily="@font/robotoslab_reg"
+        android:text="@string/no_account"
+        android:textColor="@color/colorSecondaryText"
+        android:textSize="11dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    <TextView
+        android:id="@+id/tv_daftar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="41dp"
+        android:fontFamily="@font/robotoslab_bold"
+        android:text="@string/signup"
+        android:textColor="@color/colorPrimary"
+        android:textSize="11dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_no_account"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="33dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="33dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="24dp" />
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/til_email"-->
+<!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="@string/email"-->
+<!--        tools:ignore="MissingConstraints">-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/et_email"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:inputType="text" />-->
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/til_password"-->
+<!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="@string/password"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/til_email"-->
+<!--        tools:ignore="MissingConstraints">-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/et_password"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:inputType="text" />-->
+
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--    <Button-->
+<!--        android:id="@+id/btn_login"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/login"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/til_password"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_daftar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/daftar"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/btn_login"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_forgot_password"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/lupa_password"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tv_daftar"/>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

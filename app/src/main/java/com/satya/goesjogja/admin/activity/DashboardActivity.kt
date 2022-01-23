@@ -20,6 +20,8 @@ class DashboardActivity : AppCompatActivity(), View.OnClickListener {
         val view = dashboardBinding.root
         setContentView(view)
 
+//        supportActionBar!!.hide()
+
         dashboardBinding.tvWisata.setOnClickListener(this)
         dashboardBinding.tvOrder.setOnClickListener(this)
     }
