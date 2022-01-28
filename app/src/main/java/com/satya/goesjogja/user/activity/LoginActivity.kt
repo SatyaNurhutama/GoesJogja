@@ -140,7 +140,7 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
             startActivity(intent)
             finish()
         } else {
-            showErrorSnackBar(resources.getString(R.string.loading), true)
+            showErrorSnackBar(resources.getString(R.string.gagal_login), true)
         }
 
     }

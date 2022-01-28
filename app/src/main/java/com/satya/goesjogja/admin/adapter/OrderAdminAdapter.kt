@@ -10,6 +10,7 @@ import com.satya.goesjogja.admin.activity.DetailOrderAdminActivity
 import com.satya.goesjogja.admin.model.SoldTicket
 import com.satya.goesjogja.admin.model.Wisata
 import com.satya.goesjogja.databinding.ItemListBinding
+import com.satya.goesjogja.databinding.ItemPesananBinding
 
 class OrderAdminAdapter(private val activity: Activity) : RecyclerView.Adapter<OrderAdminAdapter.OrderAdminViewHolder>() {
 
@@ -25,7 +26,7 @@ class OrderAdminAdapter(private val activity: Activity) : RecyclerView.Adapter<O
         parent: ViewGroup,
         viewType: Int
     ): OrderAdminAdapter.OrderAdminViewHolder {
-        val binding = ItemListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemPesananBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return OrderAdminViewHolder(binding)
     }
 
@@ -36,11 +37,12 @@ class OrderAdminAdapter(private val activity: Activity) : RecyclerView.Adapter<O
 
     override fun getItemCount(): Int = list.size
 
-    inner class OrderAdminViewHolder(private val binding: ItemListBinding): RecyclerView.ViewHolder(binding.root) {
+    inner class OrderAdminViewHolder(private val binding: ItemPesananBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(soldTicket: SoldTicket){
             with(binding){
                 tvNamaWisata.text = soldTicket.title
-                tvTotal.text = soldTicket.price
+                tvId.text = soldTicket.order_id
+                tvTotal.text = "Rp ${soldTicket.total_amount}"
 
                 Glide.with(itemView.context)
                     .load(soldTicket.image)

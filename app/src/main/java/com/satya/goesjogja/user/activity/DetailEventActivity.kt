@@ -31,6 +31,10 @@ class DetailEventActivity : AppCompatActivity() {
         binding.tvLokasi.text = intent.getStringExtra(EXTRA_LOKASI)
         binding.tvDeskripsi.text = intent.getStringExtra(EXTRA_DESKRIPSI)
 
+        binding.btnBack.setOnClickListener{
+            onBackPressed()
+        }
+
         Glide.with(this)
             .load(intent.getIntExtra(EXTRA_PHOTO, 0))
             .into(binding.imgEvent)

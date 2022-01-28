@@ -212,8 +212,7 @@ class UserProfileActivity : BaseActivity(), View.OnClickListener {
                 .update(hashMap)
                 .addOnSuccessListener {
                     hideProgressDialog()
-                    Toast.makeText(this, resources.getString(R.string.profile_sukses), Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this@UserProfileActivity, HomeActivity::class.java))
+                    onBackPressed()
                     finish()
                 }
 

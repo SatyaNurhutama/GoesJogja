@@ -56,7 +56,7 @@ class OrderDetailActivity : AppCompatActivity() {
         val cartListAdapter = CartAdapter(this@OrderDetailActivity, orderDetails.items,false)
         orderDetailBinding.rvCartItem.adapter = cartListAdapter
 
-        orderDetailBinding.tvTotal.text = orderDetails.total_amount
+        orderDetailBinding.tvTotal.text = "Rp ${orderDetails.total_amount}"
     }
 
 

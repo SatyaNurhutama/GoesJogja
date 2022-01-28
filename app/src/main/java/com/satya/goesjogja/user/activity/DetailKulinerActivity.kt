@@ -25,6 +25,10 @@ class DetailKulinerActivity : AppCompatActivity() {
         binding.tvTitle.text = intent.getStringExtra(EXTRA_NAME)
         binding.tvDeskripsi.text = intent.getStringExtra(EXTRA_DESKRIPSI)
 
+        binding.btnBack.setOnClickListener{
+            onBackPressed()
+        }
+
         Glide.with(this)
             .load(intent.getIntExtra(EXTRA_PHOTO, 0))
             .into(binding.imgKuliner)
