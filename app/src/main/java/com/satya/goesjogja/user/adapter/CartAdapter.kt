@@ -36,7 +36,7 @@ class CartAdapter(private val context: Context, private var list: ArrayList<Cart
         fun bind(cart: Cart) {
             with(binding) {
                 tvNamaWisata.text = cart.title
-                tvHarga.text = cart.price
+                tvHarga.text = "Rp ${cart.price}"
                 tvCartQuantity.text = cart.jumlahTiket
 
                 Glide.with(itemView.context)

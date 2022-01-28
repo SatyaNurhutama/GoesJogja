@@ -88,7 +88,7 @@ class CheckoutActivity : BaseActivity(), View.OnClickListener {
         mOrderDetails = Order(
             LoginActivity().getCurrentUserID(),
             mCartItemsList,
-            "My Order ${System.currentTimeMillis()}",
+            "Tiket ${System.currentTimeMillis()}",
             mCartItemsList[0].image,
             mTotalAmount.toString(),
             System.currentTimeMillis()

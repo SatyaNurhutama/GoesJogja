@@ -2,6 +2,7 @@ package com.satya.goesjogja.admin.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.bumptech.glide.Glide
 import com.google.firebase.firestore.FirebaseFirestore
 import com.satya.goesjogja.R
 import com.satya.goesjogja.admin.adapter.OrderAdminAdapter
@@ -49,11 +50,20 @@ class DetailOrderAdminActivity : AppCompatActivity() {
         calendar.timeInMillis = soldTicket.order_date
         binding.tvDate.text = formatter.format(calendar.time)
 
+        binding.tvNamaWisata.text = soldTicket.title
+        binding.tvHargaTiket.text = soldTicket.price
+
+        Glide.with(this)
+            .load(soldTicket.image)
+            .into(binding.imgWisata)
+
 //        val soldAdapter = OrderAdminAdapter(this)
 //        soldAdapter.setList(soldList)
 //        binding.rvCartItem.adapter = soldAdapter
 
-        binding.tvTotal.text = soldTicket.total_amount
+        binding.tvCartQuantity.text = soldTicket.sold_quantity
+
+        binding.tvTotal.text = "Rp ${soldTicket.total_amount}"
 
 
     }

@@ -141,10 +141,10 @@ class LoginAdminActivity : BaseActivity(), View.OnClickListener {
             val intent = Intent(this@LoginAdminActivity, DashboardActivity::class.java)
             intent.putExtra(EXTRA_USER_DETAILS, user)
             startActivity(intent)
+            finish()
         } else {
-            showErrorSnackBar(resources.getString(R.string.loading), true)
+            showErrorSnackBar(resources.getString(R.string.gagal_login), true)
         }
-        finish()
     }
 
     override fun onClick(v: View?) {

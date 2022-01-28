@@ -45,6 +45,7 @@
     <string name="perempuan">Perempuan</string>
     <string name="pria">Pria</string>
     <string name="wanita">Wanita</string>
+    <string name="gagal_login">Email atau password salah</string>
 
     <string name="reset_password">Reset Password</string>
     <string name="lupa_password">Lupa Password?</string>

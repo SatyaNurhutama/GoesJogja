@@ -12,6 +12,7 @@ import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.satya.goesjogja.BaseFragment
+import com.satya.goesjogja.MainActivity
 import com.satya.goesjogja.R
 import com.satya.goesjogja.databinding.FragmentProfileBinding
 import com.satya.goesjogja.user.activity.LoginActivity
@@ -93,7 +94,7 @@ class ProfileFragment : BaseFragment(), View.OnClickListener {
             when(v.id){
                 R.id.btn_log_out -> {
                     FirebaseAuth.getInstance().signOut()
-                    val intent = Intent(activity, LoginActivity::class.java)
+                    val intent = Intent(activity, MainActivity::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     startActivity(intent)
                     activity?.finish()
