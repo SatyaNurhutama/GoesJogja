@@ -40,7 +40,7 @@ class OrderAdminAdapter(private val activity: Activity) : RecyclerView.Adapter<O
         fun bind(soldTicket: SoldTicket){
             with(binding){
                 tvNamaWisata.text = soldTicket.title
-                tvLokasi.text = soldTicket.price
+                tvTotal.text = soldTicket.price
 
                 Glide.with(itemView.context)
                     .load(soldTicket.image)

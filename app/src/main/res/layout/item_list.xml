@@ -28,16 +28,6 @@
             android:orientation="vertical"
             android:padding="10dp">
 
-            <TextView
-                android:id="@+id/tv_namaWisata"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="10dp"
-                android:text="Wisata"
-                android:fontFamily="@font/robotoslab_bold"
-                android:textSize="18sp"
-                android:textColor="@color/black"/>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -57,44 +47,14 @@
                     android:paddingEnd="20dp">
 
                     <TextView
-                        android:id="@+id/tv_tanggal"
+                        android:id="@+id/tv_namaWisata"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/robotoslab_reg"
-                        android:textSize="15sp"
-                        android:textColor="@color/black"
-                        android:text="Senin, 13 Desember 2021"
-                        android:paddingBottom="5dp"/>
-
-                    <TextView
-                        android:id="@+id/tv_jam"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/robotoslab_reg"
-                        android:textSize="15sp"
-                        android:textColor="@color/black"
-                        android:text="16.30 - 22.30 WIB"
-                        android:paddingBottom="5dp"/>
-
-                    <TextView
-                        android:id="@+id/tv_jumlah"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/robotoslab_reg"
-                        android:textSize="15sp"
-                        android:textColor="@color/black"
-                        android:text="2 Orang"
-                        android:paddingBottom="5dp"/>
-
-                    <TextView
-                        android:id="@+id/tv_lokasi"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/robotoslab_reg"
-                        android:textSize="15sp"
-                        android:textColor="@color/black"
-                        android:text="Harga"
-                        android:paddingBottom="5dp"/>
+                        android:paddingBottom="10dp"
+                        android:text="Wisata"
+                        android:fontFamily="@font/robotoslab_bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/black"/>
 
                     <TextView
                         android:id="@+id/tv_total"

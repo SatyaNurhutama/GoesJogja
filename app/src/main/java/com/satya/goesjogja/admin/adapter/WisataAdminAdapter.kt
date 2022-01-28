@@ -38,7 +38,7 @@ class WisataAdminAdapter(private val activity: ListWisataAdminActivity) : Recycl
         fun bind(wisata: Wisata){
             with(binding){
                 tvNamaWisata.text = wisata.nama
-                tvLokasi.text = wisata.lokasi
+                tvTotal.text = "Rp. ${wisata.harga}"
                 itemView.setOnClickListener{
                     val intent = Intent(itemView.context, DetailWisataActivity::class.java)
                     intent.putExtra(DetailAdminActivity.EXTRA_WISATA_ID, wisata.wisata_id)

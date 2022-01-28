@@ -86,5 +86,6 @@
     <string name="checkout">Checkout</string>
 
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sem nunc vitae egestas ipsum posuere. Diam orci, aliquam, tempus, nec a nec accumsan ac. Vitae in sed aliquam nulla risus, praesent. Integer consectetur diam sit vel, felis.</string>
+    <string name="hapus">Apakah anda yakin ingin menghapus?</string>
 
 </resources>

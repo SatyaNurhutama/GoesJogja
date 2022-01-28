@@ -93,8 +93,7 @@ class ListWisataAdminActivity : BaseActivity() {
     fun alertDeleteWisata(wisataId: String){
         //ganti text nya buat hapus item
         val builder = AlertDialog.Builder(this)
-        builder.setTitle(resources.getString(R.string.gagal_pilih_gambar))
-        builder.setMessage(resources.getString(R.string.gagal_pilih_gambar))
+        builder.setTitle(resources.getString(R.string.hapus))
         builder.setIcon(android.R.drawable.ic_delete)
 
         builder.setPositiveButton(resources.getString(R.string.yes)){ dialogInterface, _ ->

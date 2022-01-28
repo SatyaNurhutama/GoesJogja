@@ -44,7 +44,7 @@ class OrderAdapter(private val context: Context) : RecyclerView.Adapter<OrderAda
         fun bind(order: Order){
             with(binding){
                 tvNamaWisata.text = order.title
-                tvLokasi.text = "Rp ${order.total_amount}"
+                tvTotal.text = "Rp ${order.total_amount}"
 
                 tvHapus.visibility = View.GONE
 
