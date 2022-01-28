@@ -46,6 +46,8 @@
                 android:id="@+id/tvNamaWisata"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
                 android:layout_gravity="center"
                 android:fontFamily="@font/robotoslab_bold"
                 android:text="Wisata"

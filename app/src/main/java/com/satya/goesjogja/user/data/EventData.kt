@@ -34,9 +34,9 @@ object EventData {
     private val eventImages = intArrayOf(
         R.drawable.event_1,
         R.drawable.event_2,
-        R.drawable.event_5,
+        R.drawable.event_3,
         R.drawable.event_4,
-        R.drawable.event_3
+        R.drawable.event_5
             )
 
     val listEvent: ArrayList<Event>
