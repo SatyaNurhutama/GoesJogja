@@ -50,6 +50,10 @@ class RegisterAdminActivity : BaseActivity() {
             registerUser()
         }
 
+        registerBinding.backSignup.setOnClickListener {
+            onBackPressed()
+        }
+
     }
 
     private fun validateRegisterDetails(): Boolean {

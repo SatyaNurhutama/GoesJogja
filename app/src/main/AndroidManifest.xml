@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".user.activity.DetailKulinerActivity"></activity>
+        <activity android:name=".admin.activity.ProfileAdminActivity"></activity>
+        <activity android:name=".user.activity.DetailKulinerActivity" />
         <activity android:name=".user.activity.ListKulinerActivity" />
         <activity android:name=".user.activity.DetailEventActivity" />
         <activity android:name=".user.activity.ListEventActivity" />
@@ -21,7 +22,7 @@
         <activity android:name=".admin.activity.OrderAdminActivity" />
         <activity android:name=".user.activity.OrderDetailActivity" />
         <activity android:name=".user.activity.CheckoutActivity" />
-        <activity android:name=".user.activity.CartActivity"/>
+        <activity android:name=".user.activity.CartActivity" />
         <activity
             android:name=".admin.activity.DetailWisataActivity"
             android:theme="@style/AppTheme.NoActionBar" />

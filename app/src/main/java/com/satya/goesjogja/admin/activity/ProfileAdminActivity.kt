@@ -6,47 +6,45 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.Menu
-import android.view.MenuInflater
-import android.view.MenuItem
 import android.view.View
 import com.bumptech.glide.Glide
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.satya.goesjogja.BaseActivity
+import com.satya.goesjogja.MainActivity
 import com.satya.goesjogja.R
-import com.satya.goesjogja.databinding.ActivityDashboardBinding
+import com.satya.goesjogja.databinding.ActivityProfileAdminBinding
 import com.satya.goesjogja.user.activity.LoginActivity
 import com.satya.goesjogja.user.activity.RegisterActivity
 import com.satya.goesjogja.user.activity.UserProfileActivity
+import com.satya.goesjogja.user.fragment.ProfileFragment
 import com.satya.goesjogja.user.model.User
 
-class DashboardActivity : AppCompatActivity(), View.OnClickListener {
+class ProfileAdminActivity : BaseActivity(), View.OnClickListener {
 
-    private lateinit var dashboardBinding: ActivityDashboardBinding
+    private lateinit var profileBinding: ActivityProfileAdminBinding
     private lateinit var mUser: User
     private val mFireStore = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        dashboardBinding = ActivityDashboardBinding.inflate(layoutInflater)
-        val view = dashboardBinding.root
-        setContentView(view)
-        getDataUser()
-        dashboardBinding.tvWisata.setOnClickListener(this)
-        dashboardBinding.tvOrder.setOnClickListener(this)
-        dashboardBinding.ivProfile.setOnClickListener(this)
-        dashboardBinding.llProfile.setOnClickListener(this)
+        profileBinding = ActivityProfileAdminBinding.inflate(layoutInflater)
+        setContentView(profileBinding.root)
         supportActionBar?.hide()
+        profileBinding.btnLogOut.setOnClickListener(this)
+        profileBinding.tvEdit.setOnClickListener(this)
     }
 
-    private fun getDataUser(){
-        mFireStore.collection(RegisterAdminActivity.USER)
-            .document(LoginAdminActivity().getCurrentUserID())
+    fun getDataUser(){
+        showProgressDialog(resources.getString(R.string.loading))
+        mFireStore.collection(RegisterActivity.USER)
+            .document(LoginActivity().getCurrentUserID())
             .get()
             .addOnSuccessListener { document ->
                 Log.i(javaClass.simpleName, document.toString())
                 val user = document.toObject(User::class.java)!!
 
-                val sharedPreferences = this?.getSharedPreferences(
+                val sharedPreferences = this.getSharedPreferences(
                     LoginActivity.GOESJOGJA_PREFERENCES,
                     Context.MODE_PRIVATE
                 )
@@ -60,16 +58,19 @@ class DashboardActivity : AppCompatActivity(), View.OnClickListener {
 
                 mUser = user
 
+                hideProgressDialog()
                 Glide.with(this)
                     .load(user.image)
                     .centerCrop()
                     .placeholder(R.drawable.ic_user_placeholder)
-                    .into(dashboardBinding.ivProfile)
+                    .into(profileBinding.imgProfile)
 
-                dashboardBinding.tvName.text = "${user.firstName} ${user.lastName}"
+                profileBinding.tvName.text = "${user.firstName} ${user.lastName}"
+                profileBinding.tvEmail.text = user.email
 
             }
             .addOnFailureListener { e ->
+                hideProgressDialog()
                 Log.e(
                     javaClass.simpleName,
                     "Error while getting user details.",
@@ -78,24 +79,25 @@ class DashboardActivity : AppCompatActivity(), View.OnClickListener {
             }
     }
 
+    override fun onResume() {
+        super.onResume()
+        getDataUser()
+    }
+
+
     override fun onClick(v: View?) {
         if(v != null){
             when(v.id){
-                R.id.tvWisata -> {
-                    val intent = Intent(this, ListWisataAdminActivity::class.java)
+                R.id.btn_log_out -> {
+                    FirebaseAuth.getInstance().signOut()
+                    val intent = Intent(this, MainActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     startActivity(intent)
+                    this.finish()
                 }
-                R.id.tvOrder -> {
-                    val intent = Intent(this, OrderAdminActivity::class.java)
-                    startActivity(intent)
-                }
-                R.id.iv_profile -> {
-                    val intent = Intent(this, ProfileAdminActivity::class.java)
-                    startActivity(intent)
-                }
-
-                R.id.ll_profile -> {
-                    val intent = Intent(this, ProfileAdminActivity::class.java)
+                R.id.tv_edit -> {
+                    val intent = Intent(this, UserProfileActivity::class.java)
+                    intent.putExtra(LoginActivity.EXTRA_USER_DETAILS, mUser)
                     startActivity(intent)
                 }
             }

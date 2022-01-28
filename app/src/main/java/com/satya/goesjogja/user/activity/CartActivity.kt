@@ -38,6 +38,10 @@ class CartActivity : BaseActivity() {
             val intent = Intent(this@CartActivity, CheckoutActivity::class.java)
             startActivity(intent)
         }
+
+        cartBinding.btnBack.setOnClickListener{
+            onBackPressed()
+        }
     }
 
 
@@ -101,6 +105,7 @@ class CartActivity : BaseActivity() {
         }
 
         else{
+            cartBinding.btnChekout.visibility = View.GONE
             cartBinding.rvCartItem.visibility = View.GONE
             cartBinding.tvKosong.visibility = View.VISIBLE
         }

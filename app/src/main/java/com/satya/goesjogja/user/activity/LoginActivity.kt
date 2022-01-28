@@ -50,6 +50,9 @@ class LoginActivity : BaseActivity(), View.OnClickListener {
         loginBinding.btnLogin.setOnClickListener(this)
         loginBinding.tvDaftar.setOnClickListener(this)
         loginBinding.tvForgotPassword.setOnClickListener(this)
+        loginBinding.backLogin.setOnClickListener{
+            onBackPressed()
+        }
     }
 
     private fun validateLoginUser(): Boolean {

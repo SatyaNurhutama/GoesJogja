@@ -29,21 +29,6 @@
 
     </RelativeLayout>
 
-<!--    <TextView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="?attr/actionBarSize"-->
-<!--        android:background="@drawable/bg_appbar"-->
-<!--        android:fontFamily="@font/robotoslab_bold"-->
-<!--        android:gravity="center"-->
-<!--        android:text="Order"-->
-<!--        android:textAlignment="center"-->
-<!--        android:textColor="@color/white"-->
-<!--        android:textSize="16sp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" -->
-<!--        android:drawableRight="@drawable/ic_baseline_shopping_cart_24"/>-->
-
     <LinearLayout
         android:id="@+id/ll_order"
         android:layout_width="match_parent"
@@ -59,16 +44,13 @@
             app:layout_constraintVertical_bias="0.992">
 
         </androidx.recyclerview.widget.RecyclerView>
-<!--        app:layout_constraintBottom_toBottomOf="@id/ll_order"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/ll_order"-->
 
         <TextView
             android:id="@+id/tv_kosong"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/log_out"
-            tools:ignore="MissingConstraints"
+            android:text="@string/kosong"
+            android:layout_gravity="center"
             tools:layout_editor_absoluteX="101dp"
             tools:layout_editor_absoluteY="177dp" />
 

@@ -39,7 +39,7 @@ class ProfileFragment : BaseFragment(), View.OnClickListener {
 
     }
     
-    private fun getDataUser(){
+    fun getDataUser(){
         showProgressDialog(resources.getString(R.string.loading))
         mFireStore.collection(RegisterActivity.USER)
                 .document(LoginActivity().getCurrentUserID())

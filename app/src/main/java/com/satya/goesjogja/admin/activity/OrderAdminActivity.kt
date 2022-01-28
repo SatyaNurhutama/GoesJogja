@@ -26,6 +26,12 @@ class OrderAdminActivity : BaseActivity() {
         orderAdminBinding = ActivityOrderAdminBinding.inflate(layoutInflater)
         val view = orderAdminBinding.root
         setContentView(view)
+
+        supportActionBar?.hide()
+
+        orderAdminBinding.btnBack.setOnClickListener{
+            onBackPressed()
+        }
     }
 
     override fun onResume() {

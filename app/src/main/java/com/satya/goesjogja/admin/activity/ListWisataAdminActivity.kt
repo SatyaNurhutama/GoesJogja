@@ -1,6 +1,7 @@
 package com.satya.goesjogja.admin.activity
 
 import android.app.AlertDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -30,8 +31,17 @@ class ListWisataAdminActivity : BaseActivity() {
         binding = ActivityListWisataAdminBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-
+        supportActionBar?.hide()
         getWisataList()
+
+        binding.ivAdd.setOnClickListener{
+            val intent = Intent(this, TambahWisataActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding.btnBack.setOnClickListener{
+            onBackPressed()
+        }
     }
 
     private fun getWisataList() {

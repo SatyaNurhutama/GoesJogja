@@ -13,7 +13,7 @@
     <string name="tv_lupasandi">Masukkan email Anda untuk menerima kode verifikasi</string>
 
     <!---->
-    <string name="t_mail">Masukan Email / No. Telp</string>
+    <string name="t_mail">Masukan Email</string>
     <string name="in_mail">Email atau No. Telp</string>
     <string name="t_sandi">Kata Sandi</string>
     <string name="t_konfirmasi_sandi">Konfirmasi Kata Sandi</string>
@@ -65,6 +65,7 @@
 
     <string name="name">Satya Nurhutama</string>
     <string name="email_user">satyanurhutama@gmail.com</string>
+    <string name="kosong">Kosong</string>
     <string name="log_out">Log Out</string>
     <string name="edit">Edit Profile</string>
     <string name="user">user</string>

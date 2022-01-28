@@ -55,6 +55,10 @@ class TambahWisataActivity : BaseActivity(), View.OnClickListener {
 
         tambahWisataBinding.btnSave.setOnClickListener(this)
         tambahWisataBinding.imgWisata.setOnClickListener(this)
+
+        tambahWisataBinding.btnBack.setOnClickListener{
+            onBackPressed()
+        }
     }
 
     override fun onClick(v: View?) {

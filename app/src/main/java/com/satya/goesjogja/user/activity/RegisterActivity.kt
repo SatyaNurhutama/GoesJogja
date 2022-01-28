@@ -44,6 +44,10 @@ class RegisterActivity : BaseActivity() {
             )
         }
 
+        registerBinding.backSignup.setOnClickListener{
+            onBackPressed()
+        }
+
         registerBinding.btnDaftar.setOnClickListener {
             registerUser()
         }

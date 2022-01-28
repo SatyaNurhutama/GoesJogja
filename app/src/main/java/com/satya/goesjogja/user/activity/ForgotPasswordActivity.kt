@@ -20,6 +20,10 @@ class ForgotPasswordActivity : BaseActivity() {
         forgotPasswordBinding.btnSend.setOnClickListener {
             forgotPassword()
         }
+
+        forgotPasswordBinding.backLupasandi.setOnClickListener{
+            onBackPressed()
+        }
     }
 
     private fun forgotPassword() {

@@ -34,6 +34,17 @@
             android:layout_centerVertical="true"
             android:layout_marginStart="20dp"/>
 
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_add_circle_24" />
+
+
     </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -52,7 +63,10 @@
         android:id="@+id/tv_kosong"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/log_out"
-        tools:ignore="MissingConstraints" />
+        android:text="@string/kosong"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
