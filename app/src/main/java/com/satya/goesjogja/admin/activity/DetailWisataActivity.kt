@@ -51,6 +51,8 @@ class DetailWisataActivity : BaseActivity(), View.OnClickListener {
         val view = detailWisataBinding.root
         setContentView(view)
 
+        supportActionBar?.hide()
+
         if(intent.hasExtra(EXTRA_WISATA_ID)){
             mWisataId = intent.getStringExtra(EXTRA_WISATA_ID)!!
             Log.i("Wisata Id", mWisataId)

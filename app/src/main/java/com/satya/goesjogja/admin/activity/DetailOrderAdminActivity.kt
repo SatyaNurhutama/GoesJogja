@@ -26,6 +26,8 @@ class DetailOrderAdminActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        supportActionBar!!.hide()
+
         var wisataDetails: SoldTicket = SoldTicket()
 
         if(intent.hasExtra(EXTRA_SOLD_PRODUCT_DETAILS)){
@@ -47,9 +49,9 @@ class DetailOrderAdminActivity : AppCompatActivity() {
         calendar.timeInMillis = soldTicket.order_date
         binding.tvDate.text = formatter.format(calendar.time)
 
-        val soldAdapter = OrderAdminAdapter(this)
-        soldAdapter.setList(soldList)
-        binding.rvCartItem.adapter = soldAdapter
+//        val soldAdapter = OrderAdminAdapter(this)
+//        soldAdapter.setList(soldList)
+//        binding.rvCartItem.adapter = soldAdapter
 
         binding.tvTotal.text = soldTicket.total_amount
 

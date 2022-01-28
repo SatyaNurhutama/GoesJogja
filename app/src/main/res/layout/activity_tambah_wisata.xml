@@ -36,189 +36,192 @@
 
     </RelativeLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
-        android:orientation="vertical"
-        android:padding="28dp"
-        android:overScrollMode="ifContentScrolls">
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            app:cardElevation="0dp"
-            app:cardCornerRadius="10dp"
-            app:cardBackgroundColor="@color/colorCard">
-
-            <ImageView
-                android:id="@+id/img_wisata"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="center"
-                android:src="@drawable/ic_baseline_add_photo_alternate_24"/>
-
-        </androidx.cardview.widget.CardView>
+        app:layout_constraintTop_toBottomOf="@id/relativeLayout"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+            android:orientation="vertical"
+            android:padding="28dp"
+            android:overScrollMode="ifContentScrolls">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_height="150dp"
                 app:cardElevation="0dp"
-                app:cardCornerRadius="5dp"
+                app:cardCornerRadius="10dp"
                 app:cardBackgroundColor="@color/colorCard">
 
-                <LinearLayout
+                <ImageView
+                    android:id="@+id/img_wisata"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="10dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Nama Wisata :"
-                        android:fontFamily="@font/robotoslab_bold"/>
-
-                    <EditText
-                        android:id="@+id/et_namaWisata"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Masukan Nama Wisata"
-                        android:fontFamily="@font/robotoslab_reg"
-                        android:textSize="14sp"
-                        android:background="@null"/>
-
-                </LinearLayout>
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_baseline_add_photo_alternate_24"/>
 
             </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="0dp"
-                app:cardBackgroundColor="@color/colorCard">
+                android:orientation="vertical">
 
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:layout_marginTop="20dp"
+                    app:cardElevation="0dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardBackgroundColor="@color/colorCard">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Deskripsi Wisata :"
-                        android:fontFamily="@font/robotoslab_bold"/>
+                        android:orientation="vertical"
+                        android:padding="10dp">
 
-                    <EditText
-                        android:id="@+id/et_deskripsiWisata"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="text|textMultiLine"
-                        android:hint="Masukan Deskripsi Wisata"
-                        android:fontFamily="@font/robotoslab_reg"
-                        android:textSize="14sp"
-                        android:background="@null"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nama Wisata :"
+                            android:fontFamily="@font/robotoslab_bold"/>
 
-                </LinearLayout>
+                        <EditText
+                            android:id="@+id/et_namaWisata"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Masukan Nama Wisata"
+                            android:fontFamily="@font/robotoslab_reg"
+                            android:textSize="14sp"
+                            android:background="@null"/>
 
-            </androidx.cardview.widget.CardView>
+                    </LinearLayout>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="0dp"
-                app:cardBackgroundColor="@color/colorCard">
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/colorCard">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Harga Tiket :"
-                        android:fontFamily="@font/robotoslab_bold"/>
+                        android:orientation="vertical"
+                        android:padding="10dp">
 
-                    <EditText
-                        android:id="@+id/et_hargaTiket"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="text|textMultiLine"
-                        android:hint="Masukan Hara Tiket"
-                        android:fontFamily="@font/robotoslab_reg"
-                        android:textSize="14sp"
-                        android:background="@null"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Deskripsi Wisata :"
+                            android:fontFamily="@font/robotoslab_bold"/>
 
-                </LinearLayout>
+                        <EditText
+                            android:id="@+id/et_deskripsiWisata"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text|textMultiLine"
+                            android:hint="Masukan Deskripsi Wisata"
+                            android:fontFamily="@font/robotoslab_reg"
+                            android:textSize="14sp"
+                            android:background="@null"/>
 
-            </androidx.cardview.widget.CardView>
+                    </LinearLayout>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:cardCornerRadius="5dp"
-                app:cardElevation="0dp"
-                app:cardBackgroundColor="@color/colorCard">
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/colorCard">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Lokasi Wisata :"
-                        android:fontFamily="@font/robotoslab_bold"/>
+                        android:orientation="vertical"
+                        android:padding="10dp">
 
-                    <EditText
-                        android:id="@+id/et_lokasi"
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Harga Tiket :"
+                            android:fontFamily="@font/robotoslab_bold"/>
+
+                        <EditText
+                            android:id="@+id/et_hargaTiket"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text|textMultiLine"
+                            android:hint="Masukan Hara Tiket"
+                            android:fontFamily="@font/robotoslab_reg"
+                            android:textSize="14sp"
+                            android:background="@null"/>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="0dp"
+                    app:cardBackgroundColor="@color/colorCard">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="text|textMultiLine"
-                        android:hint="Masukan Lokasi Wisata"
-                        android:fontFamily="@font/robotoslab_reg"
-                        android:textSize="14sp"
-                        android:background="@null"/>
+                        android:orientation="vertical"
+                        android:padding="10dp">
 
-                </LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Lokasi Wisata :"
+                            android:fontFamily="@font/robotoslab_bold"/>
 
-            </androidx.cardview.widget.CardView>
+                        <EditText
+                            android:id="@+id/et_lokasi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text|textMultiLine"
+                            android:hint="Masukan Lokasi Wisata"
+                            android:fontFamily="@font/robotoslab_reg"
+                            android:textSize="14sp"
+                            android:background="@null"/>
 
-            <Button
-                android:id="@+id/btn_save"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/bg_button"
-                android:textColor="@color/white"
-                android:fontFamily="@font/robotoslab_bold"
-                android:textAllCaps="false"
-                android:text="@string/tambah"/>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_button"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/robotoslab_bold"
+                    android:textAllCaps="false"
+                    android:text="@string/tambah"/>
+
+            </LinearLayout>
 
         </LinearLayout>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@null"/>
-
-    </LinearLayout>
+    </ScrollView>
 
 <!--    <com.google.android.material.textfield.TextInputLayout-->
 <!--        android:id="@+id/til_namaWisata"-->

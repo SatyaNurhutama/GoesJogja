@@ -28,6 +28,8 @@ class WisataActivity : BaseActivity() {
         val view = wisataBinding.root
         setContentView(view)
 
+        supportActionBar?.hide()
+
         wisataList()
     }
 
