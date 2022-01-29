@@ -42,7 +42,7 @@ class OrderAdminAdapter(private val activity: Activity) : RecyclerView.Adapter<O
             with(binding){
                 tvNamaWisata.text = soldTicket.title
                 tvId.text = soldTicket.order_id
-                tvTotal.text = "Rp ${soldTicket.total_amount}"
+                tvTotal.text = "Rp ${soldTicket.price.toInt() * soldTicket.sold_quantity.toInt()}"
 
                 Glide.with(itemView.context)
                     .load(soldTicket.image)

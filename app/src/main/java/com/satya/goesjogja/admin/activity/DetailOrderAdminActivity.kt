@@ -15,9 +15,9 @@ import kotlin.collections.ArrayList
 class DetailOrderAdminActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityDetailOrderAdminBinding
-    private val mFirestore =  FirebaseFirestore.getInstance()
+    private val mFirestore = FirebaseFirestore.getInstance()
 
-    companion object{
+    companion object {
         const val EXTRA_SOLD_PRODUCT_DETAILS: String = "extra_sold_product_details"
     }
 
@@ -31,18 +31,18 @@ class DetailOrderAdminActivity : AppCompatActivity() {
 
         var wisataDetails: SoldTicket = SoldTicket()
 
-        binding.btnBack.setOnClickListener{
+        binding.btnBack.setOnClickListener {
             onBackPressed()
         }
 
-        if(intent.hasExtra(EXTRA_SOLD_PRODUCT_DETAILS)){
+        if (intent.hasExtra(EXTRA_SOLD_PRODUCT_DETAILS)) {
             wisataDetails = intent.getParcelableExtra<SoldTicket>(EXTRA_SOLD_PRODUCT_DETAILS)!!
         }
 
         getDetailsOrder(wisataDetails)
     }
 
-    private fun getDetailsOrder(soldTicket: SoldTicket){
+    private fun getDetailsOrder(soldTicket: SoldTicket) {
 
         val soldList = ArrayList<SoldTicket>()
 
@@ -65,9 +65,16 @@ class DetailOrderAdminActivity : AppCompatActivity() {
 //        soldAdapter.setList(soldList)
 //        binding.rvCartItem.adapter = soldAdapter
 
+        var subTotal: Double = 0.0
+
+        val price = soldTicket.price.toDouble()
+        val quantity = soldTicket.sold_quantity.toInt()
+        subTotal += (price * quantity)
+
+
         binding.tvCartQuantity.text = soldTicket.sold_quantity
 
-        binding.tvTotal.text = "Rp ${soldTicket.price}"
+        binding.tvTotal.text = "Rp ${subTotal}"
 
 
     }
