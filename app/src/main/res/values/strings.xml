@@ -88,5 +88,12 @@
 
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sem nunc vitae egestas ipsum posuere. Diam orci, aliquam, tempus, nec a nec accumsan ac. Vitae in sed aliquam nulla risus, praesent. Integer consectetur diam sit vel, felis.</string>
     <string name="hapus">Apakah anda yakin ingin menghapus?</string>
+    <string name="berhasil_hapus">Wisata Terhapus</string>
+    <string name="gambar_kosong">Wajib menambahkan gambar</string>
+    <string name="nama_kosong">Nama wisata tidak boleh kosong</string>
+    <string name="deskripsi_kosong">Deskripsi wisata tidak boleh kosong</string>
+    <string name="harga_kosong">Harga wisata tidak boleh kosong</string>
+    <string name="lokasi_kosong">Lokasi wisata tidak boleh kosong</string>
+    <string name="wisata_sukses">Wisata berhasil ditambah</string>
 
 </resources>

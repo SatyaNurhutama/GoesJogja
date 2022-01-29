@@ -148,35 +148,34 @@ class TambahWisataActivity : BaseActivity(), View.OnClickListener {
     }
 
     private fun validateAddWisataDetail(): Boolean {
-        //text nya masih belom diubah
         return when {
             mSelectedImageFileUri == null -> {
-                showErrorSnackBar(resources.getString(R.string.gagal_pilih_gambar), true)
+                showErrorSnackBar(resources.getString(R.string.gambar_kosong), true)
                 false
             }
             TextUtils.isEmpty(
                     tambahWisataBinding.etNamaWisata.text.toString().trim { it <= ' ' }) -> {
-                showErrorSnackBar(resources.getString(R.string.gagal_pilih_gambar), true)
+                showErrorSnackBar(resources.getString(R.string.nama_kosong), true)
                 false
             }
             TextUtils.isEmpty(
                     tambahWisataBinding.etDeskripsiWisata.text.toString().trim { it <= ' ' }) -> {
-                showErrorSnackBar(resources.getString(R.string.gagal_pilih_gambar), true)
+                showErrorSnackBar(resources.getString(R.string.deskripsi_kosong), true)
                 false
             }
             TextUtils.isEmpty(
                     tambahWisataBinding.etHargaTiket.text.toString().trim { it <= ' ' }) -> {
-                showErrorSnackBar(resources.getString(R.string.gagal_pilih_gambar), true)
+                showErrorSnackBar(resources.getString(R.string.harga_kosong), true)
                 false
             }
             TextUtils.isEmpty(
                     tambahWisataBinding.etLokasi.text.toString().trim { it <= ' ' }) -> {
                 showErrorSnackBar(
-                        resources.getString(R.string.gagal_pilih_gambar), true)
+                        resources.getString(R.string.lokasi_kosong), true)
                 false
             }
             else -> {
-                showErrorSnackBar(resources.getString(R.string.daftar_sukses), false)
+                showErrorSnackBar(resources.getString(R.string.wisata_sukses), false)
                 true
             }
         }
@@ -202,8 +201,7 @@ class TambahWisataActivity : BaseActivity(), View.OnClickListener {
                 .set(wisata, SetOptions.merge())
                 .addOnSuccessListener {
                     hideProgressDialog()
-                    //text belom diganti
-                    Toast.makeText(this, resources.getString(R.string.daftar_sukses), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, resources.getString(R.string.wisata_sukses), Toast.LENGTH_SHORT).show()
                     finish()
                 }
                 .addOnFailureListener { e ->

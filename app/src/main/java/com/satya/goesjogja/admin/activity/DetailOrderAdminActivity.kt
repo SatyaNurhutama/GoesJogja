@@ -31,6 +31,10 @@ class DetailOrderAdminActivity : AppCompatActivity() {
 
         var wisataDetails: SoldTicket = SoldTicket()
 
+        binding.btnBack.setOnClickListener{
+            onBackPressed()
+        }
+
         if(intent.hasExtra(EXTRA_SOLD_PRODUCT_DETAILS)){
             wisataDetails = intent.getParcelableExtra<SoldTicket>(EXTRA_SOLD_PRODUCT_DETAILS)!!
         }
@@ -63,7 +67,7 @@ class DetailOrderAdminActivity : AppCompatActivity() {
 
         binding.tvCartQuantity.text = soldTicket.sold_quantity
 
-        binding.tvTotal.text = "Rp ${soldTicket.total_amount}"
+        binding.tvTotal.text = "Rp ${soldTicket.price}"
 
 
     }

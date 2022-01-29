@@ -105,7 +105,7 @@ class ListWisataAdminActivity : BaseActivity() {
                     .delete()
                     .addOnSuccessListener {
                         hideProgressDialog()
-                        Toast.makeText(this, resources.getString(R.string.daftar_sukses), Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this, resources.getString(R.string.berhasil_hapus), Toast.LENGTH_SHORT).show()
                         getWisataList()
                     }
 

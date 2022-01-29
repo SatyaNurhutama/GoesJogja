@@ -78,6 +78,12 @@ class RegisterAdminActivity : BaseActivity() {
                 showErrorSnackBar(resources.getString(R.string.err_msg_enter_confirm_password), true)
                 false
             }
+
+            !registerBinding.cbSyaratKetentuan.isChecked -> {
+                showErrorSnackBar(resources.getString(R.string.err_msg_agree_terms_and_condition), true)
+                false
+            }
+
             registerBinding.etPassword.text.toString().trim { it <= ' ' } != registerBinding.etConfirmPassword.text.toString().trim { it <= ' ' } -> {
                 showErrorSnackBar(resources.getString(R.string.err_msg_password_and_confirm_password_mismatch), true)
                 false
